@@ -4,12 +4,12 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: '**', 
+        protocol: 'https',
+        hostname: 'cdn.prod.website-files.com', 
       },
       {
         protocol: 'https',
-        hostname: '**', 
+        hostname: 'share-app-excel-parser-backend-7x17r9yvh.vercel.app', 
       },
     ],
   },
