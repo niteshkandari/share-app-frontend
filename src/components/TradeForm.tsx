@@ -1,7 +1,7 @@
 "use client";
 import { formatToInr } from "@/utils";
 import React, { useState } from "react";
-import IntlTelInput from "react-intl-tel-input";
+import IntlTelInput, { IntlTelInputProps } from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
 
 const TradeForm = () => {
@@ -51,15 +51,15 @@ const TradeForm = () => {
                 />
                   <IntlTelInput
                     value={phoneNumber}
-                    onChange={handlePhoneChange}
-                    inputProps={{
+                    onPhoneNumberChange={handlePhoneChange}
+                    telInputProps={{
                       name: "Buyer-Phone-7",
                       id: "Buyer-Phone-7",
                       required: true,
                       placeholder: "081234 56789",
-                      autocomplete: "on",
-                    }}
-                    inputClassName="w-[100%] p-4 border border-gray-300 rounded-md focus:ring-1 focus:ring-green-500 focus:outline-none"
+                      autoComplete: "on",
+                    } as IntlTelInputProps}
+                    inputClassName="w-[100%] p-4 border border-gray-300 rounded-md focus:ring-1 focus:ring-green-500 focus:outline-none !text-black"
                   />
                 <input
                   type="number"
@@ -97,14 +97,14 @@ const TradeForm = () => {
            />
              <IntlTelInput
                value={phoneNumber}
-               onChange={handlePhoneChange}
-               inputProps={{
+              //  onChange={handlePhoneChange}
+               telInputProps={{
                  name: "Buyer-Phone-7",
                  id: "Buyer-Phone-7",
                  required: true,
                  placeholder: "081234 56789",
-                 autocomplete: "on",
-               }}
+                 autoComplete: "on",
+               } as IntlTelInputProps}
                inputClassName="w-[100%] p-4 border border-gray-300 rounded-md focus:ring-1 focus:ring-green-500 focus:outline-none"
              />
            <input
