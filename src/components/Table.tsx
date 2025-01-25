@@ -1,3 +1,4 @@
+
 type TablePropsType = {
   data: Array<{ values: Array<string> }>;
   columns: Array<string>;
